@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@latest
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftp.adityahorizoninternational.com
           username: ${{ secrets.SFTP_USER }}
