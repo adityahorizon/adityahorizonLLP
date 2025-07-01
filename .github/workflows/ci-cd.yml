@@ -27,7 +27,7 @@ jobs:
         run: npm run build
 
       - name: Debug build folder contents
-        run: ls -al frontend/build
+        run: ls -al frontend/dist
 
       - name: Upload to ServerByt via SFTP
         uses: appleboy/scp-action@v0.1.7
@@ -36,5 +36,5 @@ jobs:
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           port: 22
-          source: "frontend/build/*"
+          source: "frontend/dist/*"
           target: "public_html"
