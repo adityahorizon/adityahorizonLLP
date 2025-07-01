@@ -1,4 +1,4 @@
-name: Deploy React App to ServerByt via SFTP
+name: Deploy React App via FTP
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -16,26 +16,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: 18
 
       - name: Install dependencies
         working-directory: frontend
         run: npm install
 
-
-      - name: Build React app
+      - name: Build project
         working-directory: frontend
         run: npm run build
 
-      - name: Debug build folder contents
-        run: ls -al frontend/dist
-
-      - name: Upload to ServerByt via SFTP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
-          host: ${{ secrets.SFTP_HOST }}
+          server: ftp.adityahorizoninternational.com
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          port: 22
-          source: "frontend/dist/*"
-          target: "public_html"
+          local-dir: frontend/dist
+          server-dir: public_html/
