@@ -35,3 +35,4 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           local-dir: frontend/dist/
           server-dir: adityahorizoninternational.com/
+          
