@@ -32,5 +32,5 @@ jobs:
           server: ftp.adityahorizoninternational.com
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          local-dir: frontend/dist
+          local-dir: frontend/dist/
           server-dir: public_html/
