@@ -1,16 +1,16 @@
-name: 🚀 Deploy via SSH
+name: Deploy React App to ServerByt via SFTP
 
 on:
   push:
     branches:
-      - main # or whatever branch you deploy from
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -19,14 +19,15 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: |
-          cd frontend 
-          npm install
+        working-directory: frontend
+        run: npm install
 
-      - name: Build project
-        run: |
-          cd frontend
-          npm run build
+      - name: Build React app
+        working-directory: frontend
+        run: npm run build
+
+      - name: Debug build folder contents
+        run: ls -al frontend/build
 
       - name: Upload to ServerByt via SFTP
         uses: appleboy/scp-action@v0.1.7
