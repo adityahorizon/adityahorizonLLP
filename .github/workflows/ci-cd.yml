@@ -41,5 +41,5 @@ jobs:
           server-dir: public_html/
 
       - name: Serve Build
-        working-directory: public_html
+        working-directory: public_html/
         run: serve -s
