@@ -19,11 +19,13 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: cd frontend
+        run: |
+          cd frontend 
           npm install
 
       - name: Build project
-        run: cd frontend
+        run: |
+          cd frontend
           npm run build
 
       - name: Upload to ServerByt via SFTP
