@@ -23,6 +23,10 @@ jobs:
         working-directory: frontend
         run: npm install
 
+      - name: Install serve -g
+        working-directory: frontend
+        run: npm install -g serve
+
       - name: Build project
         working-directory: frontend
         run: npm run build
@@ -35,3 +39,7 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           local-dir: frontend/dist/
           server-dir: public_html/
+
+      - name: Serve Build
+        working-directory: public_html
+        run: serve -s
