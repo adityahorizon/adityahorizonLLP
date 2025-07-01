@@ -22,7 +22,7 @@ export const en = {
     persian: "Persian (Farsi)"
   },
   hero: {
-    title: "Unlocking The World's Potential",
+    title: "PIPE",
     subtitle: "At Aditya Horizon International LLP, we deliver dependable, high-performance solutions for demanding industrial environments. Trusted by industries across India and international markets.",
     exploreProducts: "Explore Products",
     getInTouch: "Get in Touch"
