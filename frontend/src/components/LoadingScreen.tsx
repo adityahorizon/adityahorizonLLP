@@ -13,8 +13,13 @@ const LoadingScreen = () => {
           />
         </div>
         <div className="animate-logo-bounce">
-          <h1 className="text-2xl font-bold text-slate-800">Aditya Horizon</h1>
-          <p className="text-orange-600 text-sm">International LLP</p>
+          {/* <h1 className="text-2xl font-bold text-slate-800">Aditya Horizon</h1>
+          <p className="text-orange-600 text-sm">International LLP</p> */}
+          <img
+          src="/images/logo3.svg"
+          alt="Aditya"
+          className="w-60 mx-auto"
+          />
         </div>
       </div>
     </div>

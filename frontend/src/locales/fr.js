@@ -21,7 +21,7 @@ export const fr = {
     persian: "Persan (Farsi)"
   },
   hero: {
-    title: "Solutions Industrielles Fiables",
+    title: "Libérer le potentiel du monde",
     subtitle: "Chez Aditya Horizon International LLP, nous livrons des solutions fiables et haute performance pour des environnements industriels exigeants.",
     exploreProducts: "Explorer les Produits",
     getInTouch: "Nous Contacter"

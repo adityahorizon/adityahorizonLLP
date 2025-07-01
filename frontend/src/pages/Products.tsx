@@ -31,15 +31,6 @@ const Products = () => {
         "Heavy Duty Pads",
       ],
     },
-    "filter-bags": {
-      name: "Filter Bags",
-      subCategories: [
-        "Dust Collector Bags",
-        "Industrial Filter Bags",
-        "PTFE Bags",
-        "Polyester Bags",
-      ],
-    },
     'filter-bags': {
       name: 'Filter Bags',
       subCategories: [

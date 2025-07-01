@@ -21,7 +21,7 @@ export const ja = {
     persian: "ペルシア語（ファルシ語）"
   },
   hero: {
-    title: "信頼できる産業ソリューション",
+    title: "世界の可能性を解き放つ",
     subtitle: "Aditya Horizon International LLPでは、要求の厳しい産業環境に対応する信頼性の高い高性能ソリューションを提供しています。",
     exploreProducts: "製品を探索",
     getInTouch: "お問い合わせ"

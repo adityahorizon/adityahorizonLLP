@@ -21,7 +21,7 @@ export const fa = {
     persian: "فارسی"
   },
   hero: {
-    title: "راه‌حل‌های صنعتی قابل اعتماد",
+    title: "آزادسازی پتانسیل‌های جهان",
     subtitle: "در Aditya Horizon International LLP، ما راه‌حل‌های قابل اعتماد و با عملکرد بالا برای محیط‌های صنعتی سخت ارائه می‌دهیم.",
     exploreProducts: "کشف محصولات",
     getInTouch: "تماس بگیرید"

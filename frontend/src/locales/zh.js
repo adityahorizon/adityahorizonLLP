@@ -21,7 +21,7 @@ export const zh = {
     persian: "波斯语（法尔西语）"
   },
   hero: {
-    title: "可靠的工业解决方案",
+    title: "釋放世界潛力",
     subtitle: "Aditya Horizon International LLP为要求苛刻的工业环境提供可靠、高性能的解决方案。",
     exploreProducts: "探索产品",
     getInTouch: "联系我们"

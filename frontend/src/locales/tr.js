@@ -21,7 +21,7 @@ export const tr = {
     persian: "Farsça (Farsi)"
   },
   hero: {
-    title: "Güvenilir Endüstriyel Çözümler",
+    title: "Dünyanın potansiyelini açığa çıkarmak",
     subtitle: "Aditya Horizon International LLP'de, zorlu endüstriyel ortamlar için güvenilir, yüksek performanslı çözümler sunuyoruz.",
     exploreProducts: "Ürünleri Keşfedin",
     getInTouch: "İletişime Geçin"
