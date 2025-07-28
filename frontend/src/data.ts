@@ -1539,8 +1539,8 @@ export const productCategories: Record<string, ProductCategory> = {
                 products: [
                     {
                         id: 32,
-                        image: "/images/products",
-                        image2: "/images/products",
+                        image: "",
+                        image2: "",
                         name: "30200 Series",
                         description: "Standard metric tapered roller bearings designed to handle both radial and axial loads. Commonly used in automotive wheels, gearboxes, and industrial applications.",
                         bearingTable: [
