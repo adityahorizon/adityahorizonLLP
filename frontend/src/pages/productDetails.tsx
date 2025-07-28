@@ -45,11 +45,12 @@ const ProductDetail = () => {
 
     return (
         <div className="px-8 py-24">
-            <div className="flex flex-col lg:flex-row gap-8 h-screen">
+            {/* <div className="flex flex-col lg:flex-row gap-8 h-screen"> */}
+            <div className="flex flex-col lg:flex-row gap-8 lg:h-screen">
                 <div className="w-full lg:w-1/2 relative">
                     <div
                         ref={imageRef}
-                        className="relative w-full h-[500px] lg:h-[600px] overflow-hidden rounded-xl shadow-md"
+                        className="relative w-full h-[420px] lg:h-[600px] overflow-hidden rounded-xl shadow-md"
                         onMouseEnter={() => setIsHovering(true)}
                         onMouseLeave={() => setIsHovering(false)}
                         onMouseMove={handleMouseMove}
@@ -57,7 +58,7 @@ const ProductDetail = () => {
                         <img
                             src={product.image || "/images/placeholder.png"}
                             alt={product.name}
-                            className="w-full h-full object-contain"
+                            className="w-full h-full object-contain max-h-[600px]"
                         />
 
                         {isHovering && (
@@ -84,7 +85,7 @@ const ProductDetail = () => {
 
                     {isHovering && (
                         <div
-                            className="absolute bg-white top-0 left-full ml-6 border border-gray-300 shadow-lg rounded-md overflow-hidden z-50"
+                            className="absolute bg-white top-0 left-full ml-6 border border-gray-300 shadow-lg rounded-md overflow-hidden z-10"
                             style={{
                                 width: ZOOM_SIZE * ZOOM_SCALE,
                                 height: ZOOM_SIZE * ZOOM_SCALE,
@@ -96,10 +97,11 @@ const ProductDetail = () => {
                     )}
                 </div>
 
-                {/* Right side - Scrollable content */}
-                <div className="w-full lg:w-1/2 h-full">
+                {/* <div className="w-full lg:w-1/2 h-full"> */}
+                <div className="w-full lg:w-1/2 lg:h-full">
                     <div
-                        className="h-full overflow-y-auto pr-4 space-y-6"
+                        // className="h-full overflow-y-auto pr-4 space-y-6"
+                        className="space-y-6 pr-0 lg:pr-4 lg:overflow-y-auto lg:h-full"
                         style={{
                             scrollBehavior: 'smooth',
                             scrollbarWidth: 'thin',
@@ -241,7 +243,7 @@ const ProductDetail = () => {
                             </div>
                         )}
 
-                        <div className="flex gap-4 pt-4 pb-8">
+                        <div className="flex gap-4 justify-center pt-4">
                             <button className="text-white font-semibold py-3 px-8 rounded-full transition bg-[#ec4a0a] hover:brightness-90 hover:shadow-lg transform hover:scale-105 duration-200">
                                 Call Us Now
                             </button>
