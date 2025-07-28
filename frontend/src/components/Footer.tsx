@@ -15,7 +15,7 @@ const Footer = () => {
   return (
     <footer className="bg-slate-900 text-white pt-16 pb-10">
       <div className="mx-auto px-4">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4">
 
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
@@ -40,7 +40,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div>
+          <div className='mb-4'>
             <h4 className="font-semibold text-lg mb-4 text-orange-400">{t('footer.quickLinks')}</h4>
             <ul className="space-y-2">
               <li>

@@ -243,7 +243,8 @@ const ProductDetail = () => {
                             </div>
                         )}
 
-                        <div className="flex gap-4 justify-center pt-4">
+                        {/* <div className="flex gap-4 lg:jusify-start justify-center pt-4"> */}
+                        <div className="flex gap-4 justify-center lg:justify-start pt-4">
                             <a href="tel:+917990650121">
                                 <button className="text-white font-semibold py-3 px-8 rounded-full transition bg-[#ec4a0a] hover:brightness-90 hover:shadow-lg transform hover:scale-105 duration-200">
                                     Call Us Now
