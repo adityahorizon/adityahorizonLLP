@@ -1,10 +1,9 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Navbar from '../components/Navbar';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {glossaryData} from "../data"
+import { glossaryData } from "../data.ts"
 
 const Glossary = () => {
   const { t } = useTranslation();
@@ -24,14 +23,12 @@ const Glossary = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-50 to-orange-50">
-      <Navbar />
-      
       <section className="relative bg-gradient-to-br from-brand-primary-dark to-brand-primary-light mt-16 py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-secondary-light rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in text-white">
@@ -50,7 +47,7 @@ const Glossary = () => {
             <div className="flex justify-center">
               <div className="w-full max-w-md">
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-                  <SelectTrigger className="w-full bg-white border-2 border-brand-secondary-orange focus:border-brand-primary-dark shadow-lg">
+                  <SelectTrigger className="w-full bg-white border-2 border-black focus:border-brand-secondary-orange transition-colors rounded-md">
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent className="bg-white">
@@ -68,11 +65,11 @@ const Glossary = () => {
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/3 left-1/6 w-64 h-64 bg-brand-secondary-light rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/6 w-48 h-48 bg-brand-secondary-orange rounded-full blur-2xl animate-pulse" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-1/3 right-1/6 w-48 h-48 bg-brand-secondary-orange rounded-full blur-2xl animate-pulse" style={{ animationDelay: '3s' }}></div>
         </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
+
+        <div className="mx-auto px-4 relative z-10">
+          <div className="max-w-8xl mx-auto">
             <Card className="bg-white shadow-xl border-0 rounded-2xl overflow-hidden">
               <CardHeader className="text-center bg-brand-primary-dark text-white py-8">
                 <CardTitle className="text-2xl md:text-3xl font-bold">

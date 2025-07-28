@@ -7,9 +7,9 @@ const HeroSection = () => {
   const { t } = useTranslation();
 
   return (
-    <section className="relative bg-gradient-to-br from-brand-primary-dark via-brand-primary-light to-brand-secondary-orange py-24 pt-40 pb-40 overflow-hidden">
+    <section className="relative bg-gradient-to-br from-brand-primary-dark via-brand-primary-light to-brand-secondary-orange mt-12 py-16 lg:py-44 overflow-hidden">
       <div className="absolute inset-0 bg-black opacity-10"></div>
-      
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-fade-in">
@@ -18,7 +18,7 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-brand-light-gray mb-12 max-w-4xl mx-auto animate-slide-in-up">
             {t('hero.subtitle')}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-delay">
             <Link
               to="/products"

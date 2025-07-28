@@ -1,9 +1,8 @@
 
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import Navbar from '../components/Navbar';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../components/ui/select';
-import { blogPosts } from "../data"
+import { blogPosts } from "../data.ts"
 import BlogsModal from '@/components/blogsModal';
 
 const Blogs = () => {
@@ -34,8 +33,6 @@ const Blogs = () => {
   };
   return (
     <div className="bg-gradient-to-br from-slate-50 to-orange-50">
-      <Navbar />
-
       <section className="relative bg-gradient-to-br from-brand-primary-dark to-brand-primary-light mt-16 py-24 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-secondary-light rounded-full blur-3xl animate-pulse"></div>
@@ -52,13 +49,34 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-
       <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-center">
-              <div className="flex items-center space-x-2">
-                <span className="text-sm font-medium text-slate-600">Category:</span>
+              <div className="w-full max-w-md">
+                <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                  <SelectTrigger className="w-full bg-white border-2 border-black focus:border-brand-secondary-orange transition-colors rounded-md">
+                    <SelectValue placeholder="Select category" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="all">All Categories</SelectItem>
+                    {Object.entries(blogCategories).map(([key, name]) => (
+                      <SelectItem key={key} value={key}>
+                        {name}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* <section className="py-8 bg-white border-b">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <div className="w-full max-w-md">
                 <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                   <SelectTrigger className="w-64">
                     <SelectValue placeholder="Select category" />
@@ -76,15 +94,15 @@ const Blogs = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mx-auto px-4 relative z-10">
+          <div className="max-w-8xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {getFilteredBlogs().map((post, index) => (
                 <div key={index} className="bg-slate-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in group hover:scale-105">
                   <div className="p-6">
@@ -107,11 +125,11 @@ const Blogs = () => {
           </div>
         </div>
       </section>
-      <BlogsModal 
-  isOpen={selectedPost !== null}
-  onClose={() => setSelectedPost(null)}
-  post={selectedPost}
-/>
+      <BlogsModal
+        isOpen={selectedPost !== null}
+        onClose={() => setSelectedPost(null)}
+        post={selectedPost}
+      />
     </div>
   );
 };

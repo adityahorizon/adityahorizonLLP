@@ -17,6 +17,7 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
+import ProductDetail from './pages/productDetails.js';
 
 const queryClient = new QueryClient();
 
@@ -65,6 +66,7 @@ const App = () => {
                   <Route path="/products/:category" element={<Products />} />
                   <Route path="/products/:category/:subcategory" element={<Products />} />
                   <Route path="/glossary" element={<Glossary />} />
+                  <Route path='/product-detail' element={<ProductDetail />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </div>

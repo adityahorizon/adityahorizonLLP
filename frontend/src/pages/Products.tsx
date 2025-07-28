@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import { Filter, Settings, Cog } from "lucide-react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   Select,
   SelectContent,
@@ -10,46 +8,16 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../components/ui/select";
+import { productCategories } from '../data.ts'
 
 const Products = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [selectedCategory, setSelectedCategory] = useState("bearings");
+  const [selectedCategory, setSelectedCategory] = useState("filter-bags");
   const [selectedSubCategory, setSelectedSubCategory] = useState("");
 
-  const productCategories = {
-    'bearings': {
-      name: 'Bearings',
-      subCategories: ['Roller Bearings', 'Thrust Bearings']
-    },
-    "clutch-brake-pads": {
-      name: "Clutch Brake Pads",
-      subCategories: [
-        "Tractor Clutch Pads",
-        "Brake Linings",
-        "Clutch Sleeves",
-        "Heavy Duty Pads",
-      ],
-    },
-    'filter-bags': {
-      name: 'Filter Bags',
-      subCategories: [
-        'Standard Needle Felt Filter Bag',
-        'High-Temperature Resistant Filter Bags',
-        'Antistatic Filter Bags',
-        'Oil-Absorbent & Hydrocarbon Filter Bags',
-        'Mesh Filter Bags (Liquid Filtration, P re-filtration)',
-        'Anode Filter Bags',
-        'Sparkler Filter Bags',
-        'Filter Bags for FBD (Fluidized Bed Dryer)',
-        'Centrifugal Bags',
-        'Filter Press Cloth',
-        'Nutsche Filter Bag'
-      ]
-    }
-  };
 
-  // Handle URL parameters for category selection
   useEffect(() => {
     const category = searchParams.get("category");
     const subCategory = searchParams.get("subcategory");
@@ -69,66 +37,42 @@ const Products = () => {
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
-    setSelectedSubCategory(""); // Reset subcategory when main category changes
+    setSelectedSubCategory("");
+    navigate(`/products?category=${category}`);
   };
+  const handleSubCategoryChange = (subCat: string) => {
+    setSelectedSubCategory(subCat);
+    navigate(`/products?category=${selectedCategory}&subcategory=${subCat}`);
+  };
+
 
   const getFilteredProducts = () => {
     const category =
       productCategories[selectedCategory as keyof typeof productCategories];
     if (!category) return [];
 
-    // If a subcategory is selected, show only that subcategory
-    if (selectedSubCategory) {
-      return [
-        {
-          name: selectedSubCategory,
-          category: category.name,
-          icon:
-            selectedCategory === "bearings"
-              ? Settings
-              : selectedCategory === "filter-bags"
-              ? Filter
-              : Cog,
-        },
-      ];
+    const subCategories = category.subCategories;
+
+    let filteredProducts = [];
+
+    if (selectedSubCategory && selectedSubCategory !== "all") {
+      const subCat = subCategories.find((sc) => sc.name === selectedSubCategory);
+      if (subCat) {
+        filteredProducts = subCat.products || [];
+      }
+    } else {
+      filteredProducts = subCategories.flatMap((subCat) => subCat.products || []);
     }
 
-    // Otherwise show all subcategories of the selected main category
-    return category.subCategories.map((subCat) => ({
-      name: subCat,
-      category: category.name,
-      icon:
-        selectedCategory === "bearings"
-          ? Settings
-          : selectedCategory === "filter-bags"
-          ? Filter
-          : Cog,
-    }));
-  };
-
-  const getIconColor = (category: string) => {
-    switch (category) {
-      case "bearings":
-        return "from-slate-600 to-slate-700";
-      case "filter-bags":
-        return "from-blue-500 to-blue-600";
-      case "clutch-brake-pads":
-        return "from-orange-500 to-orange-600";
-      default:
-        return "from-slate-600 to-slate-700";
-    }
+    return filteredProducts;
   };
 
   return (
     <div className="bg-gradient-to-br from-slate-50 to-orange-50">
-      <Navbar />
-
-      {/* Hero Section with animated background */}
       <section className="relative bg-gradient-to-br from-brand-primary-dark to-brand-primary-light mt-16 py-24 overflow-hidden">
-        {/* Background Effects */}
-       <div className="absolute inset-0 opacity-15">
+        <div className="absolute inset-0 opacity-15">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-secondary-light rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{animationDelay: '2s'}}></div>
+          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -143,7 +87,6 @@ const Products = () => {
         </div>
       </section>
 
-      {/* Filters Section */}
       <section className="py-8 bg-white border-b">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -156,7 +99,7 @@ const Products = () => {
                   value={selectedCategory}
                   onValueChange={handleCategoryChange}
                 >
-                  <SelectTrigger className="w-48">
+                  <SelectTrigger className="w-48 bg-white border-2 border-black focus:border-brand-secondary-orange transition-colors rounded-md">
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent>
@@ -167,6 +110,7 @@ const Products = () => {
                         </SelectItem>
                       )
                     )}
+
                   </SelectContent>
                 </Select>
               </div>
@@ -177,9 +121,9 @@ const Products = () => {
                 </span>
                 <Select
                   value={selectedSubCategory}
-                  onValueChange={setSelectedSubCategory}
+                  onValueChange={handleSubCategoryChange}
                 >
-                  <SelectTrigger className="w-48">
+                  <SelectTrigger className="w-48 bg-white border-2 border-black focus:border-brand-secondary-orange transition-colors rounded-md">
                     <SelectValue placeholder="All subcategories" />
                   </SelectTrigger>
                   <SelectContent>
@@ -189,10 +133,11 @@ const Products = () => {
                     {productCategories[
                       selectedCategory as keyof typeof productCategories
                     ]?.subCategories.map((subCat) => (
-                      <SelectItem key={subCat} value={subCat}>
-                        {subCat}
+                      <SelectItem key={subCat.name} value={subCat.name}>
+                        {subCat.name}
                       </SelectItem>
                     ))}
+
                   </SelectContent>
                 </Select>
               </div>
@@ -210,39 +155,45 @@ const Products = () => {
           ></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="px-8 relative z-10">
+          <div className="max-w-8xl">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {getFilteredProducts().map((product, index) => {
-                const IconComponent = product.icon;
                 return (
                   <div
-                    key={`${product.name}-${index}`}
-                    className="bg-slate-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in group hover:scale-105"
+                    key={`${product.id}-${index}`}
+                    className="bg-slate-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 animate-fade-in group hover:scale-105 flex flex-col justify-between h-full"
                   >
-                    <div
-                      className={`w-16 h-16 bg-gradient-to-r ${getIconColor(
-                        selectedCategory
-                      )} rounded-2xl flex items-center justify-center mb-4 group-hover:animate-pulse`}
-                    >
-                      <IconComponent className="w-8 h-8 text-white" />
+                    <div>
+                      <img
+                        src={product.image || "/images/placeholder.png"}
+                        alt={product.name}
+                        className="w-full h-48 object-contain rounded-xl mb-4"
+                      />
+                      <h3 className="text-xl font-semibold text-slate-800 mb-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-slate-600 text-sm mb-2 line-clamp-1">
+                        {product.description}
+                      </p>
+                      <p className="text-slate-500 text-sm line-clamp-2">
+                        {product.description2}
+                      </p>
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-800 mb-2">
-                      {product.name}
-                    </h3>
-                    <p className="text-slate-600 mb-1 text-sm font-medium">
-                      {product.category}
-                    </p>
-                    <p className="text-slate-600">
-                      High-quality {product.name.toLowerCase()} for industrial
-                      applications.
-                    </p>
-                    <button className="mt-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full transition-colors duration-300">
-                      Learn More
-                    </button>
+
+                    <div className="mt-4">
+                      <button onClick={() =>
+                        navigate(
+                          `/product-detail?category=${selectedCategory}&subcategory=${selectedSubCategory}&id=${product.id}`
+                        )
+                      } className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-full transition-colors duration-300">
+                        View Details
+                      </button>
+                    </div>
                   </div>
                 );
               })}
+
             </div>
           </div>
         </div>

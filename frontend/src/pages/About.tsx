@@ -2,7 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Settings, Circle, ShoppingBag } from 'lucide-react';
-import { carouselData } from "../data"
+import { carouselData } from "../data.ts"
 import AutoScrollCarousel from '@/components/AutoScrollCarousel';
 
 const About = () => {
@@ -69,7 +69,7 @@ const About = () => {
         </div>
       </section>
       <section className="bg-white pt-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div>
             <AutoScrollCarousel items={carouselData.bearings} reverse={false} />
           </div>
@@ -86,7 +86,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-4xl font-bold text-brand-dark-text mb-6">Our Story</h2>
@@ -136,7 +136,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-brand-primary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-brand-dark-text mb-6">Our Manufacturing Model</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -171,7 +171,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/4 right-1/3 w-96 h-96 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="text-white animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">{t('about.mission.title')}</h2>
@@ -197,7 +197,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-1/3 left-1/4 w-64 h-64 bg-brand-primary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-brand-dark-text mb-6">Why Choose Us?</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
@@ -228,7 +228,7 @@ const About = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-brand-secondary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center text-white animate-fade-in">
             <h2 className="text-4xl font-bold mb-6">Leadership & Background</h2>
             <div className="max-w-4xl mx-auto text-lg text-white/90 leading-relaxed space-y-6">

@@ -1,7 +1,5 @@
 import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
-import { X } from 'lucide-react';
-import { blogPosts } from '../data';
 
 interface BlogPostModalProps {
   isOpen: boolean;
@@ -10,7 +8,6 @@ interface BlogPostModalProps {
     title: string;
     excerpt: string;
     target: string;
-    // Add more fields if needed
   } | null;
 }
 
