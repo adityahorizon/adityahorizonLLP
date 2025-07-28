@@ -174,7 +174,7 @@ const About = () => {
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="text-white animate-fade-in">
-              <h2 className="text-3xl font-bold mb-6">{t('about.mission.title')}</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">{t('about.mission.title')}</h2>
               <p className="text-lg text-white/90 leading-relaxed">
                 To deliver reliable, industrial-grade products that meet international standards, while offering
                 personalized service and adaptable manufacturing solutions to our customers.
@@ -182,7 +182,7 @@ const About = () => {
             </div>
 
             <div className="text-white animate-fade-in">
-              <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
+              <h2 className="text-3xl font-bold mb-6 text-center">Our Vision</h2>
               <p className="text-lg text-white/90 leading-relaxed">
                 To become a recognized leader in the industrial components sector by combining technical knowledge,
                 ethical business practices, and scalable manufacturing capabilities.
@@ -223,7 +223,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Leadership */}
       <section className="py-20 bg-brand-primary-light relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-brand-secondary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
