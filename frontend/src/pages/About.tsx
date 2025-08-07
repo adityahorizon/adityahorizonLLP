@@ -44,7 +44,7 @@ const About = () => {
       icon: <Circle className="h-12 w-12 text-brand-secondary-orange" />
     },
     {
-      title: "Clutch Brake Pads",
+      title: "Tactor Break Disk",
       description: "Clutch sleeves and brake pads are manufactured using castings from a dedicated factory in Rajkot, operated by our extended family. We oversee the final product development process, ensuring all components meet strict specifications and performance standards.",
       icon: <Settings className="h-12 w-12 text-brand-secondary-orange" />
     }

@@ -42,19 +42,19 @@ export const en = {
         features: ["Custom designs available", "International quality standards", "Multiple fabric options", "Expert technical support"]
       },
       rollBearings: {
-        title: "Roll Bearings", 
+        title: "Roll Bearings",
         description: "Precision-engineered bearings for high-load industrial applications, manufactured with CNC machining and strict quality control.",
         features: ["Forged and CNC machined", "High-load capacity", "Durable construction", "Complete bearing solutions"]
       },
       clutchBrakePads: {
-        title: "Clutch Brake Pads",
+        title: "Tactor Break Disk",
         description: "Reliable tractor clutch and brake components designed for agricultural vehicles and heavy-duty applications.",
         features: ["High-performance materials", "Long-lasting durability", "Agricultural vehicle focus", "Tested quality standards"]
       }
     },
     industries: [
       "Cement & Construction",
-      "Power Generation", 
+      "Power Generation",
       "Steel & Metallurgy",
       "Chemical Processing",
       "Pharmaceutical Manufacturing",
@@ -68,7 +68,7 @@ export const en = {
         description: "International standards compliance"
       },
       technicalExpertise: {
-        title: "Technical Expertise", 
+        title: "Technical Expertise",
         description: "Decades of manufacturing experience"
       },
       customSolutions: {
@@ -96,7 +96,7 @@ export const en = {
       description: "To deliver exceptional industrial solutions that exceed customer expectations while maintaining the highest standards of quality and reliability."
     },
     vision: {
-      title: "Our Vision", 
+      title: "Our Vision",
       description: "To be the leading provider of innovative industrial components and filtration solutions across global markets."
     },
     values: {
@@ -134,7 +134,7 @@ export const en = {
     contactInfo: "Contact Information",
     office: "Office Address",
     phone: "Phone",
-    email: "Email", 
+    email: "Email",
     hours: "Business Hours",
     mondayFriday: "Monday - Friday: 9:00 AM - 6:00 PM",
     saturday: "Saturday: 9:00 AM - 2:00 PM",
@@ -179,8 +179,8 @@ export const en = {
     title: "Technical Glossary",
     subtitle: "Comprehensive technical terms and definitions for our industrial products",
     filterBags: "Filter Bags",
-    bearings: "Bearings", 
-    clutchBrakePads: "Clutch Brake Pads",
+    bearings: "Bearings",
+    clutchBrakePads: "Tactor Break Disk",
     letter: "Letter"
   },
   footer: {

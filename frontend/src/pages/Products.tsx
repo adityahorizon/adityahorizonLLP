@@ -176,9 +176,10 @@ const Products = () => {
                       <p className="text-slate-600 text-sm mb-2 line-clamp-1">
                         {product.description}
                       </p>
-                      <p className="text-slate-500 text-sm line-clamp-2">
-                        {product.description2}
-                      </p>
+                      <p
+                        className="text-slate-700 text-sm line-clamp-2"
+                        dangerouslySetInnerHTML={{ __html: product.description2 }}
+                      ></p>
                     </div>
 
                     <div className="mt-4">

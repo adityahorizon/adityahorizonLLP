@@ -58,7 +58,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ isOpen, onClose, produc
             }
           ]
         };
-      
+
       case 'roll-bearings':
         return {
           title: 'Roll Bearings – Application Details',
@@ -105,10 +105,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ isOpen, onClose, produc
             }
           ]
         };
-      
+
       case 'clutch-brake-pads':
         return {
-          title: 'Clutch Brake Pads & Sleeves – Application Details',
+          title: 'Tactor Break Disk & Sleeves – Application Details',
           sections: [
             {
               title: 'Tractors & Farm Vehicles',
@@ -144,7 +144,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ isOpen, onClose, produc
             }
           ]
         };
-      
+
       default:
         return null;
     }
