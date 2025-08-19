@@ -53,7 +53,7 @@ const Glossary = () => {
                   <SelectContent className="bg-white">
                     <SelectItem value="filter-bags">{t('glossary.filterBags')}</SelectItem>
                     <SelectItem value="bearings">{t('glossary.bearings')}</SelectItem>
-                    <SelectItem value="clutch-brake-pads">{t('glossary.clutchBrakePads')}</SelectItem>
+                    {/* <SelectItem value="clutch-brake-pads">{t('glossary.clutchBrakePads')}</SelectItem> */}
                   </SelectContent>
                 </Select>
               </div>

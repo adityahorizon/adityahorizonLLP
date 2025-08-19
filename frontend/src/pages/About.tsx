@@ -43,11 +43,11 @@ const About = () => {
       description: "Our forging and CNC machining plant in Rajkot (family-owned) handles the production of bearing cups and cones. We carry out the key manufacturing processes like forging, turning, and machining in-house before final assembly and quality control.",
       icon: <Circle className="h-12 w-12 text-brand-secondary-orange" />
     },
-    {
-      title: "Tactor Break Disk",
-      description: "Clutch sleeves and brake pads are manufactured using castings from a dedicated factory in Rajkot, operated by our extended family. We oversee the final product development process, ensuring all components meet strict specifications and performance standards.",
-      icon: <Settings className="h-12 w-12 text-brand-secondary-orange" />
-    }
+    // {
+    //   title: "Tactor Break Disk",
+    //   description: "Clutch sleeves and brake pads are manufactured using castings from a dedicated factory in Rajkot, operated by our extended family. We oversee the final product development process, ensuring all components meet strict specifications and performance standards.",
+    //   icon: <Settings className="h-12 w-12 text-brand-secondary-orange" />
+    // }
   ];
 
   return (
@@ -76,9 +76,9 @@ const About = () => {
           <div>
             <AutoScrollCarousel items={carouselData.filterBags} reverse={true} />
           </div>
-          <div>
+          {/* <div>
             <AutoScrollCarousel items={carouselData.breakdisk} reverse={false} />
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -146,7 +146,8 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {manufacturingProcesses.map((process, index) => (
               <div
                 key={index}

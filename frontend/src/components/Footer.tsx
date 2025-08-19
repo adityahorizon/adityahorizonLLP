@@ -222,14 +222,14 @@ const Footer = () => {
                   Bearings
                 </button>
               </li>
-              <li>
+              {/* <li>
                 <button
                   onClick={() => handleProductLinkClick('clutch-brake-pads')}
                   className="text-gray-300 hover:text-white text-sm text-left"
                 >
                   Tactor Break Disk
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button
                   onClick={() => handleProductLinkClick('filter-bags')}

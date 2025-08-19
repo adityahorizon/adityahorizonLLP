@@ -16,7 +16,7 @@ const Blogs = () => {
   const blogCategories = {
     'filter-bags': 'Filter Bags',
     'bearings': 'Roll Bearings',
-    'clutch-brake-pads': 'Tactor Break Disk & Sleeves'
+    // 'clutch-brake-pads': 'Tactor Break Disk & Sleeves'
   };
 
   const getFilteredBlogs = () => {

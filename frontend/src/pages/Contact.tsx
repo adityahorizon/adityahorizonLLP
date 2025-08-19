@@ -226,7 +226,7 @@ const Contact = () => {
                     <option value="">Select a subject</option>
                     <option value="filter-bags">Filter Bags Inquiry</option>
                     <option value="bearings">Roll Bearings Inquiry</option>
-                    <option value="clutch-brake">Tactor Break Disk Inquiry</option>
+                    {/* <option value="clutch-brake">Tactor Break Disk Inquiry</option> */}
                     <option value="custom">Custom Manufacturing</option>
                     <option value="partnership">Partnership Opportunity</option>
                     <option value="other">Other</option>

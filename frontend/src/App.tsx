@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
+// import { Toaster } from "@/components/ui/toaster";
+// import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
@@ -18,6 +18,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import ProductDetail from './pages/productDetails.js';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const queryClient = new QueryClient();
 
@@ -50,8 +52,8 @@ const App = () => {
     <QueryClientProvider client={queryClient}>
       <I18nextProvider i18n={i18n}>
         <TooltipProvider>
-          <Toaster />
-          <Sonner />
+          {/* <Toaster /> */}
+          {/* <Sonner /> */}
           <BrowserRouter>
             <ScrollToTop />
             <div className="min-h-screen flex flex-col bg-white">

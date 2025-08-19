@@ -40,7 +40,9 @@ const Index = () => {
               <p>
                 At Aditya Horizon International LLP, we are committed to delivering dependable, high-performance
                 solutions for demanding industrial environments. We specialize in the manufacturing, supply, and
-                export of industrial filter bags, roller bearings, and tractor clutch brake pads, designed to serve a
+                export of industrial filter bags, roller bearings, and
+                {/* tractor clutch brake pads,  */}
+                designed to serve a
                 wide range of critical applications across multiple sectors.
               </p>
               <p>
@@ -73,43 +75,8 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* {products.map((product, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 animate-fade-in flex flex-col h-full"
-                // style={{ animationDelay: `${index * 0.2}s` }}
-                style={{
-                  backgroundImage: `url('/images/carouselImages/bearing1.jpeg')`,
-                  animationDelay: `${index * 0.2}s`,
-                  backgroundSize: 'contain'
-                }}
-              >
-                <div className="text-center mb-6 flex-grow">
-                  <div className="inline-flex items-center justify-center w-20 h-20 bg-brand-accent-gray rounded-full mb-4">
-                    {product.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">{product.title}</h3>
-                  <p className="text-white leading-relaxed mb-4">{product.description}</p>
-
-                  <ul className="space-y-2 text-left">
-                    {product.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-white">
-                        <div className="w-2 h-2 bg-brand-secondary-orange rounded-full mr-3"></div>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button
-                  onClick={() => handleLearnMore(product.type)}
-                  className="w-full mt-6 bg-brand-primary-dark hover:bg-brand-primary-light text-white py-3 rounded-lg font-semibold transition-colors duration-300"
-                >
-                  Learn More
-                </button>
-              </div>
-            ))} */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
             {products.map((product: any, index: any) => {
               const Icon = product.icon;
               return (
@@ -222,10 +189,10 @@ const Index = () => {
                     <div className="w-2 h-2 bg-brand-secondary-orange rounded-full mt-2 mr-4"></div>
                     <span>Complete bearing solutions (forged, CNC-machined, and assembled)</span>
                   </li>
-                  <li className="flex items-start">
+                  {/* <li className="flex items-start">
                     <div className="w-2 h-2 bg-brand-secondary-orange rounded-full mt-2 mr-4"></div>
                     <span>Reliable tractor clutch and brake parts</span>
-                  </li>
+                  </li> */}
                 </ul>
                 <p className="font-semibold text-brand-dark-text">
                   Our flexible approach and fast response time ensure we meet your exact technical requirements, every time.

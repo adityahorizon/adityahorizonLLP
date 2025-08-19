@@ -106,44 +106,44 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ isOpen, onClose, produc
           ]
         };
 
-      case 'clutch-brake-pads':
-        return {
-          title: 'Tactor Break Disk & Sleeves – Application Details',
-          sections: [
-            {
-              title: 'Tractors & Farm Vehicles',
-              content: 'Clutch pads transfer engine power to the transmission, enabling smooth gear shifts and preventing slippage under heavy loads. Brake pads ensure safe stopping even in muddy or rugged farm environments.'
-            },
-            {
-              title: 'Harvesting Equipment',
-              content: 'Clutch systems in harvesters rely on robust friction pads to operate under load variations and frequent start/stop cycles during field operations.'
-            },
-            {
-              title: 'Tillage & Seeding Machinery',
-              content: 'Require smooth torque transfer and precise control. Clutch sleeves and pads play a key role in effective soil preparation and seed sowing.'
-            },
-            {
-              title: 'Construction Machinery',
-              content: 'Used in small-to-medium off-road vehicles like backhoe loaders and mini excavators, where high braking force and clutch reliability are essential under load.'
-            },
-            {
-              title: 'Utility Vehicles & Loaders',
-              content: 'Brake and clutch systems depend on these components for consistent control, especially in stop-start operations across industrial or rural job sites.'
-            },
-            {
-              title: 'Trailer Brake Assemblies',
-              content: 'Brake pads and sleeves are critical in mechanical and hydraulic braking systems for agricultural or industrial trailers.'
-            },
-            {
-              title: 'OEM Spare Parts Market',
-              content: 'Your products serve as replacements or upgrades for original equipment used by major tractor and machinery manufacturers, meeting OEM fit and performance standards.'
-            },
-            {
-              title: 'Rural Transport Vehicles (RTVs)',
-              content: 'Clutch and brake components in these multipurpose utility vehicles ensure safe, reliable transport of goods and people in rural infrastructure zones.'
-            }
-          ]
-        };
+      // case 'clutch-brake-pads':
+      //   return {
+      //     title: 'Tactor Break Disk & Sleeves – Application Details',
+      //     sections: [
+      //       {
+      //         title: 'Tractors & Farm Vehicles',
+      //         content: 'Clutch pads transfer engine power to the transmission, enabling smooth gear shifts and preventing slippage under heavy loads. Brake pads ensure safe stopping even in muddy or rugged farm environments.'
+      //       },
+      //       {
+      //         title: 'Harvesting Equipment',
+      //         content: 'Clutch systems in harvesters rely on robust friction pads to operate under load variations and frequent start/stop cycles during field operations.'
+      //       },
+      //       {
+      //         title: 'Tillage & Seeding Machinery',
+      //         content: 'Require smooth torque transfer and precise control. Clutch sleeves and pads play a key role in effective soil preparation and seed sowing.'
+      //       },
+      //       {
+      //         title: 'Construction Machinery',
+      //         content: 'Used in small-to-medium off-road vehicles like backhoe loaders and mini excavators, where high braking force and clutch reliability are essential under load.'
+      //       },
+      //       {
+      //         title: 'Utility Vehicles & Loaders',
+      //         content: 'Brake and clutch systems depend on these components for consistent control, especially in stop-start operations across industrial or rural job sites.'
+      //       },
+      //       {
+      //         title: 'Trailer Brake Assemblies',
+      //         content: 'Brake pads and sleeves are critical in mechanical and hydraulic braking systems for agricultural or industrial trailers.'
+      //       },
+      //       {
+      //         title: 'OEM Spare Parts Market',
+      //         content: 'Your products serve as replacements or upgrades for original equipment used by major tractor and machinery manufacturers, meeting OEM fit and performance standards.'
+      //       },
+      //       {
+      //         title: 'Rural Transport Vehicles (RTVs)',
+      //         content: 'Clutch and brake components in these multipurpose utility vehicles ensure safe, reliable transport of goods and people in rural infrastructure zones.'
+      //       }
+      //     ]
+      //   };
 
       default:
         return null;
