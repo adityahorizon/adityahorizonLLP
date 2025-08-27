@@ -190,11 +190,25 @@ const Footer = () => {
               {t('footer.tagline')}
             </p>
             <div className="flex flex-wrap gap-4 mt-2">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
+              <a href="https://www.facebook.com/share/1DMrTDCDDd/?mibextid=wwXIfr" target='_blank' rel='noopener noreferrer'>
+                <Facebook className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
+              </a>
+              <a href="" target='_blank' rel="noopener noreferrer">
+                <Twitter className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
+              </a>
+              <a href="https://www.linkedin.com/posts/aditya-horizon-international-llp_filtmor-miningsolutions-industrialfiltration-activity-7356660556742684673-QNfG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEz6RvwB-TSeL_tKWGHuOqmWI3oublMEnJQ" target='_blank' rel="oopener noreferrer">
+                <Linkedin className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
+              </a>
+              <a
+                href="https://www.instagram.com/aditya_horizon_international?igsh=MTlpd3prMDcybXRyOQ%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Instagram className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
+              </a>
+
             </div>
+
           </div>
 
           {/* Quick Links */}

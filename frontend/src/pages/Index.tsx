@@ -27,40 +27,142 @@ const Index = () => {
     <div className="min-h-screen bg-white font-inter">
       <HeroSection />
 
-      <section className="pt-20 bg-brand-accent-gray relative overflow-hidden">
+      {/* <section className="py-12 bg-brand-accent-gray relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-primary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div
+            className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-primary-light rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
         </div>
+
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl font-bold text-brand-dark-text mb-6">
-              Your Reliable Partner in Industrial Solutions
-            </h2>
-            <div className="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed space-y-6">
-              <p>
-                At Aditya Horizon International LLP, we are committed to delivering dependable, high-performance
-                solutions for demanding industrial environments. We specialize in the manufacturing, supply, and
-                export of industrial filter bags, roller bearings, and
-                {/* tractor clutch brake pads,  */}
-                designed to serve a
-                wide range of critical applications across multiple sectors.
-              </p>
-              <p>
-                With years of hands-on industry experience and strong roots in manufacturing, we have earned the trust
-                of clients across India and international markets—thanks to our consistent focus on quality, technical
-                support, and long-term partnerships.
-              </p>
-              <p>
-                Our products are engineered to perform in the most challenging operating conditions, offering
-                durability, precision, and efficiency to enhance your plant's performance and reduce downtime.
-              </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+            <div className="animate-fade-in">
+              <h2 className="text-4xl font-bold text-brand-dark-text mb-6">
+                Your Reliable Partner in Industrial Solutions
+              </h2>
+              <div className="max-w-2xl text-lg text-gray-700 leading-relaxed space-y-6">
+                <p>
+                  At Aditya Horizon International LLP, we are committed to delivering
+                  dependable, high-performance solutions for demanding industrial
+                  environments. We specialize in the manufacturing, supply, and
+                  export of industrial filter bags, roller bearings, and designed to
+                  serve a wide range of critical applications across multiple sectors.
+                </p>
+                <p>
+                  With years of hands-on industry experience and strong roots in
+                  manufacturing, we have earned the trust of clients across India and
+                  international markets—thanks to our consistent focus on quality,
+                  technical support, and long-term partnerships.
+                </p>
+                <p>
+                  Our products are engineered to perform in the most challenging
+                  operating conditions, offering durability, precision, and efficiency
+                  to enhance your plant's performance and reduce downtime.
+                </p>
+              </div>
             </div>
+
+            <div className="flex justify-center lg:justify-end">
+              <img
+                src="/images/carouselImages/bearing1.jpeg"
+                alt="Industrial Solutions"
+                className="w-full max-w-md rounded-xl shadow-lg animate-float"
+              />
+            </div>
+          </div>
+        </div>
+      </section> */}
+      {/* <section className="py-12 bg-brand-accent-gray relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-primary-light rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            <div className="animate-fade-in">
+              <h2 className="text-4xl lg:text-5xl font-bold text-brand-dark-text mb-8 leading-tight">
+                Your Reliable Partner in Industrial Solutions
+              </h2>
+              <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+                <p>
+                  At Aditya Horizon International LLP, we are committed to delivering dependable, high-performance solutions for demanding industrial environments. We specialize in the manufacturing, supply, and export of industrial filter bags, roller bearings, and related products designed to serve a wide range of critical applications across multiple sectors. Along with our core products, we also source and supply multiple industrial products from India, catering to the needs of clients across global markets.
+                </p>
+
+              </div>
+            </div>
+
+            <div className="flex justify-center lg:justify-end animate-fade-in">
+              <div className="relative">
+                <img
+                  src="/images/carouselImages/bearing1.jpeg"
+                  alt="Industrial Solutions"
+                  className="w-full max-w-lg lg:max-w-xl h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl animate-float"
+                />
+                <div className="absolute -bottom-6 -right-6 w-24 h-24 bg-brand-secondary-orange opacity-20 rounded-full blur-xl"></div>
+                <div className="absolute -top-6 -left-6 w-32 h-32 bg-brand-primary-light opacity-15 rounded-full blur-xl"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section> */}
+      <section className="py-12 bg-brand-accent-gray relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-primary-light rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+            {/* Text Section */}
+            <div className="animate-fade-in text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark-text mb-6 leading-tight">
+                Your Reliable Partner in Industrial Solutions
+              </h2>
+              <div className="text-base sm:text-lg text-gray-700 leading-relaxed space-y-6">
+                <p>
+                  At Aditya Horizon International LLP, we are committed to delivering
+                  dependable, high-performance solutions for demanding industrial
+                  environments. We specialize in the manufacturing, supply, and export
+                  of industrial filter bags, roller bearings, and related products
+                  designed to serve a wide range of critical applications across
+                  multiple sectors. Along with our core products, we also source and
+                  supply multiple industrial products from India, catering to the
+                  needs of clients across global markets.
+                </p>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex justify-center lg:justify-end animate-fade-in">
+              <div className="relative">
+                <img
+                  src="/images/carouselImages/bearing1.jpeg"
+                  alt="Industrial Solutions"
+                  className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-72 sm:h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl animate-float"
+                />
+                {/* Decorative circles */}
+                <div className="absolute -bottom-6 -right-6 w-20 sm:w-24 h-20 sm:h-24 bg-brand-secondary-orange opacity-20 rounded-full blur-xl"></div>
+                <div className="absolute -top-6 -left-6 w-24 sm:w-32 h-24 sm:h-32 bg-brand-primary-light opacity-15 rounded-full blur-xl"></div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
       {/* Product Highlights */}
-      <section id="products-section" className="py-20 bg-white relative overflow-hidden">
+      {/* <section id="products-section" className="py-12 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>
@@ -75,7 +177,6 @@ const Index = () => {
             </p>
           </div>
 
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
             {products.map((product: any, index: any) => {
               const Icon = product.icon;
@@ -122,10 +223,10 @@ const Index = () => {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Industries We Serve */}
-      <section className="py-20 bg-brand-primary-dark relative overflow-hidden">
+      <section className="py-12 bg-brand-primary-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '3s' }}></div>
         </div>
@@ -165,7 +266,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 bg-brand-accent-gray relative overflow-hidden">
+      {/* <section className="py-12 bg-brand-accent-gray relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-primary-light rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
         </div>
@@ -189,10 +290,6 @@ const Index = () => {
                     <div className="w-2 h-2 bg-brand-secondary-orange rounded-full mt-2 mr-4"></div>
                     <span>Complete bearing solutions (forged, CNC-machined, and assembled)</span>
                   </li>
-                  {/* <li className="flex items-start">
-                    <div className="w-2 h-2 bg-brand-secondary-orange rounded-full mt-2 mr-4"></div>
-                    <span>Reliable tractor clutch and brake parts</span>
-                  </li> */}
                 </ul>
                 <p className="font-semibold text-brand-dark-text">
                   Our flexible approach and fast response time ensure we meet your exact technical requirements, every time.
@@ -224,10 +321,72 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </section> */}
+      <section className="py-12 bg-brand-accent-gray relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div
+            className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-brand-primary-light rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "4s" }}
+          ></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in lg:text-left text-center">
+              <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark-text mb-6 leading-snug">
+                Manufacturing with Quality at the Core
+              </h2>
+              <div className="space-y-4 text-base sm:text-lg text-gray-700">
+                <p>
+                  All our products are manufactured in compliance with international
+                  quality standards and undergo strict quality control at every stage
+                  of production. Backed by modern machinery and experienced technicians.
+                </p>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 min-w-[0.5rem] bg-brand-secondary-orange rounded-full mt-2"></span>
+                    <span className="ml-3">Custom filter bag designs tailored to your specifications</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 min-w-[0.5rem] bg-brand-secondary-orange rounded-full mt-2"></span>
+                    <span className="ml-3">Complete bearing solutions (forged, CNC-machined, and assembled)</span>
+                  </li>
+                </ul>
+                <p className="font-semibold text-brand-dark-text">
+                  Our flexible approach and fast response time ensure we meet your
+                  exact technical requirements, every time.
+                </p>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-6 animate-fade-in">
+              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                <Settings className="h-10 w-10 sm:h-12 sm:w-12 text-brand-secondary-orange mx-auto mb-3" />
+                <h3 className="font-bold text-brand-dark-text mb-1 text-base sm:text-lg">Quality Assurance</h3>
+                <p className="text-gray-600 text-sm sm:text-base">International standards compliance</p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                <Circle className="h-10 w-10 sm:h-12 sm:w-12 text-brand-secondary-orange mx-auto mb-3" />
+                <h3 className="font-bold text-brand-dark-text mb-1 text-base sm:text-lg">Technical Expertise</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Decades of manufacturing experience</p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                <ShoppingBag className="h-10 w-10 sm:h-12 sm:w-12 text-brand-secondary-orange mx-auto mb-3" />
+                <h3 className="font-bold text-brand-dark-text mb-1 text-base sm:text-lg">Custom Solutions</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Tailored to your requirements</p>
+              </div>
+              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+                <Settings className="h-10 w-10 sm:h-12 sm:w-12 text-brand-secondary-orange mx-auto mb-3" />
+                <h3 className="font-bold text-brand-dark-text mb-1 text-base sm:text-lg">Global Reach</h3>
+                <p className="text-gray-600 text-sm sm:text-base">Serving India and international markets</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-r from-brand-primary-dark to-brand-primary-light relative overflow-hidden">
+      <section className="py-12 bg-gradient-to-r from-brand-primary-dark to-brand-primary-light relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-brand-secondary-orange rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         </div>

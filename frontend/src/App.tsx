@@ -18,6 +18,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import LoadingScreen from "./components/LoadingScreen";
 import ProductDetail from './pages/productDetails.js';
+import SocialSidebar from './components/SocialSidebar.js';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -58,6 +59,7 @@ const App = () => {
             <ScrollToTop />
             <div className="min-h-screen flex flex-col bg-white">
               <Navbar />
+              <SocialSidebar />
               <div className="flex-grow">
                 <Routes>
                   <Route path="/" element={<Index />} />

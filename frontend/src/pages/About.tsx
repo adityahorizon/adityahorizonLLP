@@ -68,7 +68,7 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section className="bg-white pt-20">
+      {/* <section className="bg-white pt-20">
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div>
             <AutoScrollCarousel items={carouselData.bearings} reverse={false} />
@@ -76,11 +76,11 @@ const About = () => {
           <div>
             <AutoScrollCarousel items={carouselData.filterBags} reverse={true} />
           </div>
-          {/* <div>
+          <div>
             <AutoScrollCarousel items={carouselData.breakdisk} reverse={false} />
-          </div> */}
+          </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
@@ -92,15 +92,10 @@ const About = () => {
               <h2 className="text-4xl font-bold text-brand-dark-text mb-6">Our Story</h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  At Aditya Horizon International LLP, we are proud to be a new-age industrial manufacturer with deep
-                  rooted experience in mechanical and materials engineering. Although we're a startup in structure, our
-                  foundations are built on decades of family-run manufacturing expertise across Gujarat, India.
+                  At Aditya Horizon International LLP, we are a global trading and manufacturing company based in Ahmedabad, India. With strong roots in industrial manufacturing and a reliable sourcing network across India, we deliver high-quality solutions to industries worldwide.
                 </p>
                 <p>
-                  We specialize in the production and supply of filter bags, roll bearings, and tractor clutch brake
-                  pads, serving a wide range of industrial sectors with durable, efficient, and reliable components. What
-                  sets us apart is not just what we manufacture—but how we manage the process from raw material to
-                  finished product.
+                  We manufacture Taper Roller Bearings and Industrial Filter Bags at our own facilities, while also sourcing a wide range of other industrial products through trusted vendor partnerships. This unique blend of in-house production and strategic sourcing allows us to serve clients with dependable products, customized solutions, and timely global supply.
                 </p>
               </div>
             </div>
@@ -177,16 +172,14 @@ const About = () => {
             <div className="text-white animate-fade-in">
               <h2 className="text-3xl font-bold mb-6 text-center">{t('about.mission.title')}</h2>
               <p className="text-lg text-white/90 leading-relaxed">
-                To deliver reliable, industrial-grade products that meet international standards, while offering
-                personalized service and adaptable manufacturing solutions to our customers.
+                To deliver dependable, high-performance industrial solutions by combining in-house manufacturing with trusted sourcing partnerships. We aim to provide our clients with quality products, timely service, and customized solutions that enhance efficiency and build long-term relationships.
               </p>
             </div>
 
             <div className="text-white animate-fade-in">
               <h2 className="text-3xl font-bold mb-6 text-center">Our Vision</h2>
               <p className="text-lg text-white/90 leading-relaxed">
-                To become a recognized leader in the industrial components sector by combining technical knowledge,
-                ethical business practices, and scalable manufacturing capabilities.
+                To be recognized as a global leader in industrial sourcing and manufacturing, trusted for our commitment to quality, reliability, and innovation. We aspire to expand our presence worldwide, connecting Indian manufacturing excellence with industries across the globe
               </p>
             </div>
           </div>
