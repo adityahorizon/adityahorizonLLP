@@ -199,6 +199,7 @@ const Footer = () => {
               <a href="https://www.linkedin.com/posts/aditya-horizon-international-llp_filtmor-miningsolutions-industrialfiltration-activity-7356660556742684673-QNfG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEz6RvwB-TSeL_tKWGHuOqmWI3oublMEnJQ" target='_blank' rel="oopener noreferrer">
                 <Linkedin className="w-5 h-5 text-gray-400 hover:text-orange-400 transition-colors cursor-pointer" />
               </a>
+
               <a
                 href="https://www.instagram.com/aditya_horizon_international?igsh=MTlpd3prMDcybXRyOQ%3D%3D&utm_source=qr"
                 target="_blank"
