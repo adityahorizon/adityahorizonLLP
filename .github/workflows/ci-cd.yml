@@ -1,4 +1,4 @@
-name: Deploy React App via SFTP
+name: Deploy React App via SSH
 
 on:
   push:
@@ -25,17 +25,20 @@ jobs:
         working-directory: frontend
         run: npm run build
 
-      - name: List build output
-        working-directory: frontend/dist
-        run: ls -la
-
       - name: Deploy via SFTP
         uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ${{ secrets.SSH_HOST }}          # ssh.gb.stackcp.com
+          server: ssh.gb.stackcp.com
           port: 22
-          username: ${{ secrets.SSH_USER }}        # adityahorizoninternational.com
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          username: adityahorizoninternational.com
+          ssh_private_key: |
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+            QyNTUxOQAAACCsPXFaJ6LTVOiRdkLhuZU5F5D4HEXVMf0xowfsFxR1RQAAAJjccpP43HKT
+            +AAAAAtzc2gtZWQyNTUxOQAAACCsPXFaJ6LTVOiRdkLhuZU5F5D4HEXVMf0xowfsFxR1RQ
+            AAAEBUK169SB6Te1QlHZ+DdW4bHjTl6KMfq7p5rsv++gy/+6w9cVonotNU6JF2QuG5lTkX
+            kPgcRdUx/TGjB+wXFHVFAAAADmdpdGh1Yi1hY3Rpb25zAQIDBAUGBw==
+            -----END OPENSSH PRIVATE KEY-----
           local_path: "frontend/dist/*"
-          remote_path: "adityahorizoninternational.com/" # adjust if needed
-          delete_remote_files: false               # set true to wipe before upload
+          remote_path: "adityahorizoninternational.com/"
+          delete_remote_files: false
