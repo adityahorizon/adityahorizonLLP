@@ -8,31 +8,31 @@ on:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
-
-
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4 # Upgrade to latest checkout action
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Upgrade to latest setup-node action
         with:
-          node-version: 18
+          node-version: '20' # Use latest LTS Node.js version
 
       - name: Install dependencies
         working-directory: frontend
-        run: npm install
+        run: npm ci # Use npm ci for faster, deterministic installs
 
       - name: Build project
         working-directory: frontend
         run: npm run build
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # Use latest version
         with:
           server: ftp.adityahorizoninternational.com
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           local-dir: frontend/dist/
-          server-dir: adityahorizoninternational.com/
-          
+          server-dir: adityahorizoninternational.com/ # Verify this path
+          protocol: ftps # Explicitly use FTPS
+          timeout: 30000 # Increase timeout to 30 seconds
+          debug: true # Enable debug logging
