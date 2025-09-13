@@ -24,15 +24,18 @@ jobs:
       - name: Build project
         working-directory: frontend
         run: npm run build
+        
+      - name: List build output (debug)
+        working-directory: frontend/dist
+        run: ls -la # Verify build output
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5 # Use latest version
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.adityahorizoninternational.com
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           local-dir: frontend/dist/
           server-dir: adityahorizoninternational.com/ # Verify this path
-          protocol: ftps # Explicitly use FTPS
-          timeout: 30000 # Increase timeout to 30 seconds
-          debug: true # Enable debug logging
+          protocol: ftps
+          timeout: 30000
