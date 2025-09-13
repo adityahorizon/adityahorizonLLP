@@ -134,7 +134,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center text-center md:text-left md:items-start max-w-4xl">
 
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-[500px] text-white leading-tight mb-4 sm:mb-6 lg:mb-8">
-            <span className="block">Unlocking The World</span>
+            <span className="block">Unlocking The World's</span>
             <span className="block mt-1 sm:mt-2">Potential</span>
           </h1>
 
