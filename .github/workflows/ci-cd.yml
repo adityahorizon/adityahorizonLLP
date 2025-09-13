@@ -1,4 +1,4 @@
-name: Deploy React App via FTP
+name: Deploy React App via SFTP
 
 on:
   push:
@@ -6,16 +6,16 @@ on:
       - main
 
 jobs:
-  ftp-deploy:
+  sftp-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4 # Upgrade to latest checkout action
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4 # Upgrade to latest setup-node action
+        uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use latest LTS Node.js version
+          node-version: '20'
 
       - name: Install dependencies
         working-directory: frontend
@@ -24,18 +24,18 @@ jobs:
       - name: Build project
         working-directory: frontend
         run: npm run build
-        
-      - name: List build output (debug)
-        working-directory: frontend/dist
-        run: ls -la # Verify build output
 
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: List build output
+        working-directory: frontend/dist
+        run: ls -la
+
+      - name: Deploy via SFTP
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          server: ftp.adityahorizoninternational.com
-          username: ${{ secrets.SFTP_USER }}
-          password: ${{ secrets.SFTP_PASS }}
-          local-dir: frontend/dist/
-          server-dir: adityahorizoninternational.com/ # Verify this path
-          protocol: ftps
-          timeout: 30000
+          server: ${{ secrets.SSH_HOST }}          # ssh.gb.stackcp.com
+          port: 22
+          username: ${{ secrets.SSH_USER }}        # adityahorizoninternational.com
+          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local_path: "frontend/dist/*"
+          remote_path: "adityahorizoninternational.com/" # adjust if needed
+          delete_remote_files: false               # set true to wipe before upload
