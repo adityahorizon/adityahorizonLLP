@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         working-directory: frontend
-        run: npm ci # Use npm ci for faster, deterministic installs
+        run: npm install
 
       - name: Build project
         working-directory: frontend
