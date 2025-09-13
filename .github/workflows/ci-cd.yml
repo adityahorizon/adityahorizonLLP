@@ -31,7 +31,8 @@ jobs:
           server: ssh.gb.stackcp.com
           port: 22
           username: adityahorizoninternational.com
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh_private_key: |
+            ${{ secrets.SSH_PRIVATE_KEY }}
           local_path: "frontend/dist/*"
           remote_path: "adityahorizoninternational.com/"
           delete_remote_files: false
