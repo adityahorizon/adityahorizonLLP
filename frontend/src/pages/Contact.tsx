@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
+import emailjs from "@emailjs/browser";
+import { toast } from 'react-toastify';
+import PhoneNumberInput from '../components/PhoneNumberInput'
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -12,6 +15,7 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
     const { name, value } = e.target;
@@ -21,38 +25,40 @@ const Contact = () => {
     }));
   };
 
-  // const handleSubmit = async (e: { preventDefault: () => void; }) => {
-  //   e.preventDefault();
+  const handlePhoneChange = (value: string | undefined) => {
+    setFormData((prev) => ({ ...prev, phone: value || "" }));
+  };
 
-  //   try {
-  //     const response = await fetch('http://localhost:5000/api/send', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify(formData),
-  //     });
+  console.log(formData, "formData")
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
 
-  //     const result = await response.json();
-
-  //     if (result.success) {
-  //       alert("Message sent successfully!");
-  //       setFormData({
-  //         name: "",
-  //         email: "",
-  //         company: "",
-  //         phone: "",
-  //         subject: "",
-  //         message: "",
-  //       });
-  //     } else {
-  //       alert("Failed to send message.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error submitting form:", error);
-  //     alert("Something went wrong. Please try again later.");
-  //   }
-  // };
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        formData,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        toast.success("Message sent successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      })
+      .catch((error) => {
+        console.error("FAILED...", error);
+        toast.error("Failed to send message. Please try again.");
+      })
+      .finally(() => setLoading(false));
+  };
 
 
   return (
@@ -143,8 +149,7 @@ const Contact = () => {
               ></iframe>
             </div>
             <div className="bg-white rounded-lg shadow-md p-8 animate-fade-in border border-brand-light-gray">
-              {/* onSubmit={handleSubmit} */}
-              <form className="space-y-6" >
+              <form className="space-y-6" onSubmit={(e) => handleSubmit(e)} >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-brand-dark-text mb-2">
@@ -199,14 +204,10 @@ const Contact = () => {
                     <label htmlFor="phone" className="block text-sm font-medium text-brand-dark-text mb-2">
                       Phone Number
                     </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-brand-light-gray rounded-lg focus:ring-2 focus:ring-brand-secondary-orange focus:border-transparent text-sm"
-                      placeholder="+91 12345 67890"
+
+                    <PhoneNumberInput
+                      value={formData?.phone}
+                      onChange={handlePhoneChange}
                     />
                   </div>
                 </div>
@@ -228,7 +229,6 @@ const Contact = () => {
                     <option value="bearings">Roll Bearings Inquiry</option>
                     {/* <option value="clutch-brake">Tactor Break Disk Inquiry</option> */}
                     <option value="custom">Custom Manufacturing</option>
-                    <option value="partnership">Partnership Opportunity</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
@@ -254,7 +254,7 @@ const Contact = () => {
                     type="submit"
                     className="bg-brand-secondary-orange hover:bg-brand-secondary-light text-white px-8 py-3 rounded-lg font-semibold text-base transition-all duration-300 transform hover:scale-105"
                   >
-                    Send Message
+                    {loading ? 'Sending Mail...' : 'Send Message'}
                   </button>
                 </div>
               </form>

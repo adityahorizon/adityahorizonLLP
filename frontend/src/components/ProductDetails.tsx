@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from './ui/dialog';
-import { X } from 'lucide-react';
 
 interface ProductDetailsProps {
   isOpen: boolean;
