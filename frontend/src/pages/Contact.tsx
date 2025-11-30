@@ -130,13 +130,13 @@ const Contact = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-8 animate-fade-in">
             <div className="rounded-lg overflow-hidden shadow-md border border-brand-light-gray">
-              <div className="absolute top-32 left-12 z-10 bg-white p-4 rounded-lg shadow-md text-sm text-brand-dark-text max-w-xs w-full">
+              {/* <div className="absolute top-32 left-12 z-10 bg-white p-4 rounded-lg shadow-md text-sm text-brand-dark-text max-w-xs w-full">
                 <p className="font-semibold mb-1">📍Our Location</p>
                 <p>Block D-432, 3rd Floor, Sumel 8</p>
                 <p>Old Bharat Bobbin Mill Compound,</p>
                 <p>Char Rasta, Near Ajit Mill,</p>
                 <p>Ahmedabad – 380023, Gujarat, India</p>
-              </div>
+              </div> */}
               <iframe
                 title="Company Location"
                 width="100%"
@@ -145,7 +145,8 @@ const Contact = () => {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=Block+D-432,+3rd+Floor,+Sumel+8,+Ahmedabad&z=17&output=embed"
+                // src="https://www.google.com/maps?q=Block+D-432,+3rd+Floor,+Sumel+8,+Ahmedabad&z=17&output=embed"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3674.7499481900256!2d72.6283556!3d23.021599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e87cd4f87c4cf%3A0xf6aacf78407b701f!2sAditya%20Horizon%20International%20LLP!5e0!3m2!1sen!2sin!4v1732700000000!5m2!1sen!2sin"
               ></iframe>
             </div>
             <div className="bg-white rounded-lg shadow-md p-8 animate-fade-in border border-brand-light-gray">

@@ -183,7 +183,7 @@ const Footer = () => {
               />
               <div>
                 <h3 className="font-bold text-lg text-orange-400">Aditya Horizon</h3>
-                <p className="text-sm text-gray-300">International LLP</p>
+                <p className="text-gray-300">International LLP</p>
               </div>
             </div>
             <p className="text-gray-300 text-sm mb-3">
@@ -256,7 +256,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
             <h4 className="font-semibold text-lg mb-3 text-orange-400">{t('footer.contact')}</h4>
             <div className="space-y-3">
